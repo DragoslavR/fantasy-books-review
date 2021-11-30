@@ -1,7 +1,3 @@
-// div {
-//   background-image: url("../images/dragon.jpg");
-// }
-
 .home { 
   background-image: image-url('dragon.jpg');
   background-repeat: no-repeat;
@@ -12,7 +8,6 @@
   position: absolute;
 }
 
-
 .top-bar {
   background-color: rgb(252, 248, 226);
   a {color: black;}
@@ -21,7 +16,6 @@
       background-color: white;
       a {
         color: black;
-
       }
     }
   }
