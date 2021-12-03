@@ -1,11 +1,27 @@
 import React, { useState, useEffect } from 'react'
 import BookTile from './BookTile'
-import helperFetch from './helpers/Fetcher'
 
 const BooksIndexPage = (props) => {
   const [books, setBooks] = useState([])
 
+  const booksFetch = async () => {
+    try {
+      const response = await fetch("/api/v1/books")
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`
+        const error = new Error(errorMessage)
+        throw(error)
+      }
+      const parsedJson = await response.json()
+      // debugger
+      setBooks(parsedJson.books.docs)
+    } catch(err) {
+      console.error(`Error in fetch: ${err.message}`)
+    }
+  }
+
   useEffect(() => {
+
     // helperFetch('api/v1/books').then(booksData => {
     //   setBooks(booksData.books)
     // })
@@ -15,10 +31,13 @@ const BooksIndexPage = (props) => {
       // console.log(books)
       setBooks(books.docs)
     })
+
+    booksFetch()
   }, [])
 
 
   const bookTiles = books.map((book) => {
+    //use debuggers here to inspect the book elements for be rendered
     return(
       <div className="book-tile cell small-4" key={book.id}>
         <BookTile
@@ -31,7 +50,7 @@ const BooksIndexPage = (props) => {
 
   return(
     <div className="book-tile-container" >
-      <div className="grid-x grid-margin-x grid-margin-10 space" >
+      <div>
         {bookTiles}
       </div>
     </div>
