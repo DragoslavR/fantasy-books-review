@@ -12,6 +12,8 @@ class Api::V1::BooksController < ApplicationController
     render json: { books: parsed_response }
   end
 
-  
+  def show
+    render json: Book.find(params[:id]), include: 'reviews.user'
+  end
   
 end

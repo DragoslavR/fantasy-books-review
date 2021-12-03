@@ -1,3 +1,4 @@
+
 .home { 
   background-image: image-url('dragon.jpg');
   background-repeat: no-repeat;
@@ -9,11 +10,14 @@
 }
 
 .top-bar {
-  background-color: rgb(252, 248, 226);
-  a {color: black;}
+  background-color: rgb(172, 109, 109);
+  a {color: black;
+    font-size: large;
+  }
   .top-bar-right {
     .button {
       background-color: white;
+      border-radius: 50%;
       a {
         color: black;
       }
