@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { useState, useEffect } from 'react'
 import BookTile from './BookTile'
 
 const BooksIndexPage = (props) => {
@@ -21,20 +22,9 @@ const BooksIndexPage = (props) => {
   }
 
   useEffect(() => {
-
-    // helperFetch('api/v1/books').then(booksData => {
-    //   setBooks(booksData.books)
-    // })
-    helperFetch("https://openlibrary.org/search.json?author=tolkien")
-    // .then((response) => response.json())
-    .then((books) => {
-      // console.log(books)
-      setBooks(books.docs)
-    })
-
     booksFetch()
-  }, [])
 
+  }, [])
 
   const bookTiles = books.map((book) => {
     //use debuggers here to inspect the book elements for be rendered
