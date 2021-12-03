@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 const BookTile = (props) => {
   const {book} = props
-  // debugger
 
   return(
     // div
