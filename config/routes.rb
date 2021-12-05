@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   root "homes#index"
   
   get "/books", to: "homes#index"
+  get "/books/works/:key", to: "homes#index"
 
   namespace :api do
     namespace :v1 do
-      resources :books, only: [:index]
+      resources :books, only: [:index, :show]
+      resources :authors, only: [:show]
 
       resources :users, only: [:index]
     end
