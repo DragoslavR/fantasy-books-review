@@ -9,10 +9,7 @@ gem install rails
 
 ## Installation
 
-First clone the repo.
-
-```
-In your terminal:
+First clone the repo. In your terminal:
 
 ```
 git clone https://github.com/LaunchAcademy/rails-6-boilerplate
@@ -23,7 +20,7 @@ yarn install
 If you prefer, **you can rename your project with the `mv` command.**
  After successfully cloning run the following commands in sequence:
 
-```bash
+```
 bundle exec rake db:create
 bundle exec rake db:migrate
 bundle exec rake db:seed
