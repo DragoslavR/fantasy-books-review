@@ -15,8 +15,13 @@
 
 .top-bar {
   background-color: rgb(172, 109, 109);
-  a {color: black;
-    font-size: large;
+  // a {color: black;
+  //   font-size: large;
+  // }
+  .top-bar-left {
+    a {color: black;
+    font-size: larger;
+    }
   }
   .top-bar-right {
     .button {
@@ -29,3 +34,4 @@
     }
   }
 }
+
