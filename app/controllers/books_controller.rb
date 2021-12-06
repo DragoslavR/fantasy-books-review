@@ -16,11 +16,10 @@ class BooksController < ApplicationController
       render :new
     end
   end
-end
 
   private
 
   def book_params
     params[:book].permit(:title, :authors, :year, :synopsis)
   end
-
+end
