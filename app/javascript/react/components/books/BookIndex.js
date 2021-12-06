@@ -13,7 +13,6 @@ const BooksIndexPage = (props) => {
         throw(error)
       }
       const parsedJson = await response.json()
-      // debugger
       setBooks(parsedJson.books.docs)
     } catch(err) {
       console.error(`Error in fetch: ${err.message}`)
@@ -21,18 +20,13 @@ const BooksIndexPage = (props) => {
   }
 
   useEffect(() => {
-
     booksFetch()
   }, [])
 
-
   const bookTiles = books.map((book) => {
-    //use debuggers here to inspect the book elements for be rendered
-    console.log(book)
     return(
       <div className="book-tile cell small-4" key={book.key}>
         <BookTile
-          
           book={book}
         />
       </div>
