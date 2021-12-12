@@ -14,13 +14,11 @@
 }
 
 .top-bar {
-  background-color: rgb(172, 109, 109);
-  // a {color: black;
-  //   font-size: large;
-  // }
+  background-color: rgb(80, 43, 43);
   .top-bar-left {
-    a {color: black;
-    font-size: larger;
+    a {color: rgb(196, 162, 162);
+    font-size: 3rem;
+    font-family: 'UnifrakturCook', cursive;
     }
   }
   .top-bar-right {
