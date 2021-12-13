@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import helperFetch from './helpers/Fetcher'
 import ReviewForm from './ReviewsForm.js'
 import ReviewTiles from './ReviewTile'
+import BookTile from './BookTile'
 
 const BookShowPage = (props) => {
   const [book, setBook] = useState({authorList: []})
@@ -95,18 +96,18 @@ const BookShowPage = (props) => {
       setFormData={setFormData}
     />
   )
-
+   
   return(
     <div>
-    <div className="book-text">
-      <h1>{book.title}</h1>
-      <ul>{authorTiles}</ul>
+      <div className="book-text">
+        <h1>{book.title}</h1>
+        <ul>{authorTiles}</ul>
       </div>
       <div className="grid-x grid-margin-x grid-margin-y align-center-middle">
         {createReviews}
       </div>
         {reviewTiles}
-      </div>
+    </div>
   )
 }
 

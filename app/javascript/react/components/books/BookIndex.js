@@ -35,7 +35,7 @@ const BooksIndexPage = (props) => {
 
   return(
     <div className="book-tile-container" >
-      <div>
+      <div className="list-image">
         {bookTiles}
       </div>
     </div>

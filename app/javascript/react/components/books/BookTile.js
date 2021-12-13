@@ -5,7 +5,6 @@ const BookTile = (props) => {
   const {book} = props
 
   return(
-    
     <Link to={`/books${book.key}`}>
       <div>
         <p className="book-title-text" >
