@@ -7,7 +7,7 @@ feature "user can sign out" do
     visit "/"
     click_link "Sign In"
     fill_in "Email", with: test_user.email
-    fil_in "Password", with: test_user.password
+    fill_in "Password", with: test_user.password
     click_button "Log in"
 
     click_link "Sign Out"
