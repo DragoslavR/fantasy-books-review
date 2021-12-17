@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature "user" do
 
-  let!(test_user) {User.create!(email: "test_user@email.com", password: "password", username: "test_user_2", first_name: "test", last_name: "user")}
+  let!(:test_user) {User.create!(email: "test_user@email.com", password: "password", username: "test_user_2", first_name: "test", last_name: "user")}
 
   scenario 'is able to sign in with the right info' do
     visit "/"

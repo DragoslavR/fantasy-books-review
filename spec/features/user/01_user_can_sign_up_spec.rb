@@ -9,7 +9,7 @@ feature 'user is able to' do
 
     click_link "Sign Up"
 
-    expect(page).to have_content("Sign up")
+    expect(page).to have_content("Sign Up")
 
   end
 
@@ -20,8 +20,8 @@ feature 'user is able to' do
     fill_in 'Password' , with: "password"
     fill_in 'Password confirmation' , with: "password"
     fill_in 'Email' , with: "test@mail.com"
-    fill_in 'First name' , with: "New"
-    fill_in 'Last name' , with: "User"
+    fill_in 'First Name' , with: "New"
+    fill_in 'Last Name' , with: "User"
 
     click_button "Sign up"
 
@@ -54,14 +54,14 @@ feature 'user is able to' do
 
     visit "/"
 
-    click_link "Sign up"
+    click_link "Sign Up"
 
     fill_in 'Username' , with: test_user.username
     fill_in 'Password' , with: "password"
     fill_in 'Password confirmation' , with: "password"
     fill_in 'Email' , with: "test@mail.com"
-    fill_in 'First name' , with: "New"
-    fill_in 'Last name' , with: "User"
+    fill_in 'First Name' , with: "New"
+    fill_in 'Last Name' , with: "User"
 
     click_button "Sign up"
 

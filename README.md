@@ -2,6 +2,8 @@
 
 This application allows users to browse a list of fantasy books and add reviews for each book.
 For building this app I used the Open Library API. As a front end I used React.js and as a back end Ruby on Rails, and for styling I used Foundations and CSS.
+The application has following tests:
+- user sign in, user sign up, user sign out.
 
 ## Dependencies
 ruby version 3.0.2 <br>
