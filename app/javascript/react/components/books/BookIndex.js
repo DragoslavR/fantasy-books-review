@@ -1,8 +1,12 @@
+import { array } from 'prop-types'
 import React, { useState, useEffect } from 'react'
 import BookTile from './BookTile'
+import Search from './Search'
 
 const BooksIndexPage = (props) => {
   const [books, setBooks] = useState([])
+  const [search, setSearch] = useState([])
+  const [searchResults, setSearchResults] = useState([])
 
   const booksFetch = async () => {
     try {
@@ -33,8 +37,25 @@ const BooksIndexPage = (props) => {
     )
   })
 
+  let array = books.docs
+
+  const searchHandler = (search) => {
+    setSearch(search)
+    if(search !== "") {
+      const newBookList = array.filter((book) => {
+        return Object.values(book)
+        .join(" ")
+        .toLowerCase()
+        .includes(search.toLowerCase())
+      })
+      setSearchResults(newBookList)
+    } else (array)
+  }
+
+  console.log(searchResults)
   return(
     <div className="book-tile-container" >
+      <Search term={search} searchKeyword={searchHandler}/>
       <div className="list-image">
         {bookTiles}
       </div>
