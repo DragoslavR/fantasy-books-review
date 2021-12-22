@@ -18,6 +18,7 @@ const BooksIndexPage = (props) => {
       }
       const parsedJson = await response.json()
       setBooks(parsedJson.books.docs)
+      setSearchResults(parsedJson.books.docs)
     } catch(err) {
       console.error(`Error in fetch: ${err.message}`)
     }
@@ -27,7 +28,7 @@ const BooksIndexPage = (props) => {
     booksFetch()
   }, [])
 
-  const bookTiles = books.map((book) => {
+  const bookTiles = searchResults.map((book) => {
     return(
       <div className="book-tile cell small-4" key={book.key}>
         <BookTile
@@ -37,7 +38,7 @@ const BooksIndexPage = (props) => {
     )
   })
 
-  let array = books.docs
+  let array = books
 
   const searchHandler = (search) => {
     setSearch(search)
@@ -52,7 +53,6 @@ const BooksIndexPage = (props) => {
     } else (array)
   }
 
-  console.log(searchResults)
   return(
     <div className="book-tile-container" >
       <Search term={search} searchKeyword={searchHandler}/>
