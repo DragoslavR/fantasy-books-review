@@ -15,9 +15,9 @@ class Api::V1::BooksController < ApplicationController
       url = "https://openlibrary.org/works/#{params[:id]}.json"
       api_response = Faraday.get(url)
       parsed_response = JSON.parse(api_response.body)
-      Book.create(title: parsed_response["title"], authors: parsed_response["authors"][0]["author"]["key"], bookApiKey: params[:id])
+      book = Book.create(title: parsed_response["title"], authors: parsed_response["authors"][0]["author"]["key"], bookApiKey: params[:id])
       
-      render json: parsed_response
+      render json: book
     end
   end
   

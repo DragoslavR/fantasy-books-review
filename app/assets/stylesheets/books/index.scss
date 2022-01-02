@@ -20,3 +20,12 @@
   position: relative;
   padding: auto;
 }
+
+@media screen and (max-width:1920px) {
+  .book-tile-container {
+    width: 95%;
+  }
+  .list-image {
+    width: 100%;
+  }
+}
