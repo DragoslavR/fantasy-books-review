@@ -12,14 +12,28 @@
 <body>
   <div class="top-bar">
     <span class="top-bar-left"><%= link_to "Fantasy Book Reviews", root_path %></span>
-    <div class="top-bar-right">
-      <% if signed_in? %>
-        <span class="nav-text"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></span>
-      <% else %>
-        <span class="button nav-text"><%= link_to "Sign In", new_user_session_path %></span>
-        <span class="button nav-text"><%= link_to "Sign Up", new_user_registration_path %></span>
-      <% end %>
-    </div>
+    <ul class="menu dropdown" data-dropdown-menu>
+    <li>
+      <a href="#">Menu</a>
+      <ul class="menu">
+        <li>
+          <a href="/books">Book List</a>
+        </li>
+        <% if signed_in? %>
+        <li>
+          <a href="#"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></a>
+        </li>
+        <% else %>
+        <li>
+          <a href="#"><%= link_to "Sign In", new_user_session_path %></a>
+        </li>
+        <li> 
+          <a href="#"><%= link_to "Sign Up", new_user_registration_path %></a>
+        </li>
+        <% end %>
+      </ul>
+    </li>
+    </ul>
   </div>
 
   <%- flash.each do |key, value| -%>
