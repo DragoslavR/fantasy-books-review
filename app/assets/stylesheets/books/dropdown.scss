@@ -1,0 +1,20 @@
+.menu {
+  background: rgb(196, 162, 162);
+  border-radius: 20%;
+  margin-top: 4px;
+
+  a {
+    color: rgb(80, 43, 43);
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 1.5rem;
+    background-color: rgb(196, 162, 162);
+    }
+
+    &:hover {
+      background: lighten(rgb(80, 43, 43), 30%);
+    }
+  }
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after{
+  border-color: rgb(80, 43, 43) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}

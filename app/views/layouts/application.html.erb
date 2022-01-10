@@ -22,7 +22,7 @@
         </li>
         <% if signed_in? %>
         <li>
-          <a href="#"><span class="nav-text"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></span></a>
+          <a href="#"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></a>
         </li>
         <% else %>
         <li>
