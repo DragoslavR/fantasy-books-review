@@ -42,6 +42,7 @@ and below that, add a brief review.
 
 # Project Links
 https://github.com/DragoslavR/fantasy-books-review.git
+https://fantasy-book-reviews.herokuapp.com
 
 #Author
 
