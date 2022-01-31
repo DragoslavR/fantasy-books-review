@@ -31,14 +31,14 @@ bundle exec rake db:seed
 ## Instructions
 
 * To create an account, navigate to the top right to sign up through a sign up form. The form requires adding a Username, First name, Last name, Email and Password.
-* Once logged in, you can click on an each book within the book index page(referred to as the List of books link in the top left corner of the Home page) to add a rating
-and below that, add a brief review.
+* On the Book List page you can search for a book title using a search feature.
+* Once logged in, you can click on an each book within the book index page(referred to as the List of books link in the top left corner of the Home page) to add a rating and below that, add a brief review.
 
 ## Future state
 
 * Add a feature for signed in users to add books to the list. This would include adding a book title, author, year of first publication and a brief synopsis. 
 * Add a role of admin who will need to approve newly added books and have an ability to edit and/or delete reviews and books from the database.
-* Add a search bar to look for books based on the book title, author or a year.
+
 
 # Project Links
 https://github.com/DragoslavR/fantasy-books-review.git
