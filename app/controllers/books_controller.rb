@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :authenticate_user!
-  before action :authorize_user, except: [:index]
+  before_action :authorize_user, except: [:index]
 
   def new
     @book = Book.new
